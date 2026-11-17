@@ -39,15 +39,15 @@ spec:
             - name: mysql-data
               mountPath: /var/lib/mysql
 
-      volumeClaimTemplates:
-        - metadata:
-            name: mysql-data
-          spec:
-            accessModes:
-              -  ReadWriteOnce
+  volumeClaimTemplates:
+    - metadata:
+        name: mysql-data
+      spec:
+        accessModes:
+          -  ReadWriteOnce
               
-            storageClassName: gp2
+        storageClassName: gp2
           
-            resources:
-              requests:
-                storage: 2Gi
+        resources:
+          requests:
+            storage: 2Gi
