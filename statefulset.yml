@@ -7,7 +7,7 @@ spec:
   serviceName: mysqldb
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       app: app-database
   template:
     metadata:
