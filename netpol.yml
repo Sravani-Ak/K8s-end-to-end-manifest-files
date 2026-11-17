@@ -27,14 +27,14 @@ spec:
   egress:
     - to:
         - podSelector:
-          matchLabels:
-            app: app-database
+            matchLabels:
+              app: app-database
       ports:
         - port: 3306
         
     - to:
         - namespaceSelector:
-          matchLabels:
+           matchLabels:
             kubernetes.io/metadata.name: kube-system
       ports:
         - port: 53
