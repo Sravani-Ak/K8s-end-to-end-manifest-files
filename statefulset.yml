@@ -39,7 +39,7 @@ spec:
             - name: pvc-1
               mountPath: /var/lib/mysql
 
-      volumeClaimtemplates:
+      volumeClaimTemplates:
         - metadata:
             name: pvc-1
           spec:
