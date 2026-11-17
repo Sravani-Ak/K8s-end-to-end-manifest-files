@@ -5,13 +5,16 @@ metadata:
   name: bankapp-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    
 spec:
-  ingressClassname: nginx
+  ingressClassName: nginx
+  
   rules: 
     - http: 
         paths: 
           - path: /
             pathType: Prefix
+            
             backend:
               service:
                 name: my-service
