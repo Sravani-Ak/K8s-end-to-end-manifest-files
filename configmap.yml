@@ -1,0 +1,9 @@
+---
+apiversion: v1
+kind: Configmap
+metadata:
+  name: bankapp-onfig
+data:
+  DB_HOST: mysqldb
+  DB_PORT: "3306"
+  
