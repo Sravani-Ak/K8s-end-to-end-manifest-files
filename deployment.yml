@@ -22,7 +22,7 @@ spec:
         #configmap Integration
           envFrom:
             - configMapRef:
-              name: bankapp-config
+                name: bankapp-config
             
         #resource Quota
           resources:
