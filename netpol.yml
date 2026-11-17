@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: bankapp-allow-ingress
+  
 spec:
   podSelector:
     matchLabels:
@@ -24,19 +25,19 @@ spec:
               - port: 80
   egress:
     - to:
-      - podSelector:
+        - podSelector:
           matchLabels:
             app: app-database
-          ports:
-            - port: 3306
+      ports:
+        - port: 3306
         
     - to:
-      - namespaceSelector:
+        - namespaceSelector:
           matchLabels:
             kubernetes.io/metadata.name: kube-system
-          ports:
-            - port: 53
-              protocol: UDP
+      ports:
+        - port: 53
+          protocol: UDP
               
 
 
