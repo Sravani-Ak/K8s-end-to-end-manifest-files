@@ -4,7 +4,8 @@ kind: StatefulSet
 metadata:
   name: mysql
 spec:
-  repicas: 1
+  serviceName: mysqldb
+  replicas: 1
   selector:
     matchlabels:
       app: app-database
